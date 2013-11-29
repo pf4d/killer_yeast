@@ -17,7 +17,7 @@ The differential equation we may use for modeling the growth of yeast is the sam
 \end{align*}
 where $N$ and is the number of yeast in the chamber in units number/volume, $C$ is the concentration of nutrient in the chamber with units mass/volume, $C_0$ is the concentration of nutrient in the reservoir, $F$ is the in/out flow rate with units volume/time, $V$ is the volume of the chamber, $\alpha$ is a unitless inverse of the yield constant, and $K(C)$ is the reproduction rate for yeast in units 1/time with possible formula chosen such that $\lim_{C \rightarrow \infty} = K_{max}$, the maximum possible reproduction rate:
 $$K(C) = \frac{K_{max} C}{K_n + C}.$$
-We are also provided with some data for the problem for two separate runs, along with the concentration of nutrient in the reservoir, $C_0 = 0.02$.
+We are also provided with some data for the problem for two separate runs, along with the concentration of nutrient in the reservoir, $C_0 = 0.02$.  The quantitative measurement for fitness is the growth rate (Volumes/Hr), but I'm not entirely sure what Optical Density at Steady State is exactly and require clarification.
 
 \section{K1 Run}
 \subsection*{Vessel One :}
@@ -52,6 +52,12 @@ We are also provided with some data for the problem for two separate runs, along
   Optical Density at Steady State & 0.385 & 0.456 & 0.363 & 0.197 & 0.044 & 0.004 \\
 \end{tabular}
 \end{center}
+
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{images/data.png}
+\end{figure}
 
 \end{document}
 

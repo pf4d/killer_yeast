@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.8.10)  26 NOV 2013 21:45
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.8.10)  29 NOV 2013 11:29
 entering extended mode
  %&-line parsing enabled.
 **yeast_project.tex
@@ -493,27 +493,30 @@ Overfull \hbox (28.63339pt too wide) in paragraph at lines 42--46
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./yeast_project.aux) 
-) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<images/data.png, id=14, 722.7pt x 361.35pt>
+File: images/data.png Graphic file (type png)
+ <use images/data.png> [2 <./images/data.png>] (./yeast_project.aux) ) 
 Here is how much of TeX's memory you used:
- 5266 strings out of 495061
- 70043 string characters out of 1182621
+ 5274 strings out of 495061
+ 70151 string characters out of 1182621
  138628 words of memory out of 3000000
- 8366 multiletter control sequences out of 15000+50000
+ 8371 multiletter control sequences out of 15000+50000
  14430 words of font info for 54 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 29i,8n,46p,560b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-tex
-live/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
-xmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on yeast_project.pdf (2 pages, 103813 bytes).
+ 29i,8n,46p,560b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on yeast_project.pdf (2 pages, 231391 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
