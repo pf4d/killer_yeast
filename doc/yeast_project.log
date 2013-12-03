@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  2 DEC 2013 19:03
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  3 DEC 2013 12:12
 entering extended mode
  %&-line parsing enabled.
 **yeast_project.tex
@@ -483,12 +483,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 10.
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<images/drawing.png, id=19, 203.3196pt x 198.2607pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<images/drawing.png, id=14, 229.8186pt x 188.8656pt>
 File: images/drawing.png Graphic file (type png)
  <use images/drawing.png>
-Overfull \hbox (10.77351pt too wide) in paragraph at lines 78--78
-[] 
+[2 <./images/drawing.png>]
+Overfull \hbox (28.63339pt too wide) in paragraph at lines 86--90
+ [] 
  []
 
 
@@ -496,40 +497,31 @@ Overfull \hbox (28.63339pt too wide) in paragraph at lines 95--99
  [] 
  []
 
-
-Overfull \hbox (28.63339pt too wide) in paragraph at lines 104--108
- [] 
- []
-
-<images/data.png, id=21, 722.7pt x 361.35pt>
+<images/data.png, id=22, 722.7pt x 361.35pt>
 File: images/data.png Graphic file (type png)
- <use images/data.png> [3 <./images/drawing.png>] [4 <./images/data.png>] (./ye
-ast_project.aux) ) 
+ <use images/data.png> [3 <./images/data.png>] (./yeast_project.aux) ) 
 Here is how much of TeX's memory you used:
  5288 strings out of 495061
  70341 string characters out of 1182620
- 145628 words of memory out of 3000000
+ 146628 words of memory out of 3000000
  8381 multiletter control sequences out of 15000+50000
  15414 words of font info for 58 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 29i,11n,46p,826b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx
-12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share
-/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texl
-ive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/a
-msfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/tex
-mf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fo
-nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
-s/cm/cmsy6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.p
-fb>
-Output written on yeast_project.pdf (4 pages, 313686 bytes).
+ 29i,11n,46p,826b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmsy8.pfb>
+Output written on yeast_project.pdf (3 pages, 282402 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
