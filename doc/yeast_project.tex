@@ -12,13 +12,75 @@ MATH 445 - Statistical, Dynamical, and Computational Modeling}
 \section*{Proposal}
 The differential equation we may use for modeling the growth of yeast is the same as that used for bacterial growth in a chemostat:
 \begin{align*}
-  \frac{dN}{dt} &= K(C) N - \frac{FN}{V}, \\
-  \frac{dC}{dt} &= -\alpha K(C) N - \frac{FC}{V} + \frac{FC_0}{V},
+  \frac{dN}{dt} &= k(C) N - \frac{FN}{V}, \\
+  \frac{dC}{dt} &= -\alpha k(C) N - \frac{FC}{V} + \frac{FC_0}{V},
 \end{align*}
-where $N$ and is the number of yeast in the chamber in units number/volume, $C$ is the concentration of nutrient in the chamber with units mass/volume, $C_0$ is the concentration of nutrient in the reservoir, $F$ is the in/out flow rate with units volume/time, $V$ is the volume of the chamber, $\alpha$ is a unitless inverse of the yield constant, and $K(C)$ is the reproduction rate for yeast in units 1/time with possible formula chosen such that $\lim_{C \rightarrow \infty} = K_{max}$, the maximum possible reproduction rate:
-$$K(C) = \frac{K_{max} C}{K_n + C}.$$
-We are also provided with some data for the problem for two separate runs, along with the concentration of nutrient in the reservoir, $C_0 = 0.02$.  The quantitative measurement for fitness is the growth rate (Volumes/Hr), but I'm not entirely sure what Optical Density at Steady State is exactly and require clarification.
+with initial conditions $C(0) = C_i$ and $N(0) = N_i$, $N$ is the number of yeast in the chamber in units number/volume, $C$ is the concentration of nutrient in the chamber with units mass/volume, $C_0$ is the concentration of nutrient in the reservoir, $F$ is the in/out flow rate with units volume/time, $V$ is the volume of the chamber, $\alpha$ is a unitless inverse of the yield constant, and $k(C)$ is the reproduction rate for yeast in units 1/time with possible formula chosen such that $\lim_{C \rightarrow \infty} = k_{max}$, and $k_{max}$ represents the maximum possible reproduction rate:
+$$k(C) = \frac{k_{max} C}{k_n + C}.$$
+where $k_n$ is chosen such that $k(k_n) = k_{max} / 2$.  The quantitative measurement for fitness is a measurement of optical density at steady state (equilibrium) at a given flow rate ($F$) in volumes/hr.
 
+Because the data is collected in density form, we propose solving for density $\rho = N/V$:
+\begin{align*}
+  \frac{d\rho}{dt} &= k(C) \rho - \frac{F\rho}{V}, \\
+  \frac{dC}{dt} &= -\alpha k(C) \rho - \frac{FC}{V} + \frac{FC_0}{V},
+\end{align*}
+with initial conditions $\rho(0) = \rho_i$ and $C(0) = C_i$, and all other constants are identical as before.
+
+In order to find the steady states, we have to find the intersections of the null-clines at equilibrium points $(\bar{\rho}, \bar{C})$, i.e.\ $d\bar{\rho}/dt = 0$ and $d\bar{C}/dt = 0$:
+\begin{align*}
+  \frac{d\rho(\bar{\rho}, \bar{C})}{dt} &= k(\bar{C}) \bar{\rho} - \frac{F\bar{\rho}}{V}, \\
+  &= \bar{\rho} \left( k(\bar{C}) - \frac{F}{V} \right) = 0, \\
+\end{align*}
+which is zero for $\bar{\rho} = 0$ or $k(\bar{C}) = F/V$.  Solving the other equation gives us the other steady-states:
+\begin{align*}
+  \frac{dC(\bar{\rho}, \bar{C})}{dt} &= -\alpha k(\bar{C}) \bar{\rho} - \frac{F\bar{C}}{V} + \frac{FC_0}{V} = 0,
+\end{align*}
+which is zero for $\alpha k(\bar{C}) \bar{\rho} + \frac{F\bar{C}}{V} = \frac{FC_0}{V}$.
+
+In order to evaluate these null-clines, we need to evaluate the non-trivial cases, here for $\dot{\rho} = 0$,
+\begin{align}
+  k(\bar{C}) = \frac{k_{max} \bar{C}}{k_n + \bar{C}} &= \frac{F}{V} \notag \\
+  k_{max} \bar{C} &= \frac{F}{V} (k_n + \bar{C}) \notag \\
+  k_{max} \bar{C} - \frac{F}{V}\bar{C} &= \frac{F}{V} k_n \notag \\
+  \bar{C} \left( k_{max} - \frac{F}{V} \right) &= \frac{F}{V} k_n \notag \\
+  \bar{C} &= \frac{F k_n}{V \left( k_{max} - \frac{F}{V}\right)} \notag \\
+  \bar{C} &= \frac{F k_n}{V k_{max} - F}.
+\end{align}
+Likewise, for $\dot{C} = 0$,
+\begin{align}
+  \alpha k(\bar{C}) \bar{\rho} + \frac{F\bar{C}}{V} &= \frac{FC_0}{V} \notag \\
+  \alpha \left[ \frac{k_{max}\bar{C}}{k_n + \bar{C}} \right] \bar{\rho} + \frac{F\bar{C}}{V} &= \frac{FC_0}{V} \notag \\
+  \alpha k_{max}\bar{C} \bar{\rho} + \frac{F\bar{C}}{V} (k_n + \bar{C}) &= \frac{FC_0}{V} (k_n + \bar{C}) \notag \\
+  \alpha k_{max}\bar{C} \bar{\rho} + \frac{F\bar{C}}{V} (k_n + \bar{C}) &= \frac{FC_0}{V} (k_n + \bar{C}) \notag \\
+  \alpha k_{max}\bar{C} \bar{\rho} + \frac{F\bar{C} k_n}{V} + \frac{F\bar{C}^2}{V}  &= \frac{FC_0 k_n}{V} + \frac{FC_0 \bar{C}}{V} \notag \\
+  \alpha k_{max}\bar{C} \bar{\rho} &= \frac{FC_0 k_n}{V} + \frac{FC_0 \bar{C}}{V} - \frac{F\bar{C} k_n}{V} - \frac{F\bar{C}^2}{V} \notag \\
+  \bar{\rho} &= \frac{FC_0 k_n}{V(\alpha k_{max} \bar{C})} + \frac{FC_0 \bar{C}}{V(\alpha k_{max} \bar{C})} - \frac{F\bar{C} k_n}{V(\alpha k_{max} \bar{C})} - \frac{F\bar{C}^2}{V(\alpha k_{max} \bar{C})} \notag \\
+  \bar{\rho} &= \frac{FC_0 k_n}{V \alpha k_{max} \bar{C}} + \frac{FC_0}{V \alpha k_{max}} - \frac{F k_n}{V \alpha k_{max}} - \frac{F\bar{C}}{V \alpha k_{max}} \notag \\
+  \bar{\rho} &= \frac{F}{V \alpha k_{max}} \left( \frac{C_0 k_n}{\bar{C}} + C_0 - k_n - \bar{C} \right). 
+\end{align}
+
+\newpage
+
+\begin{multicols}{2}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.40\textwidth]{images/drawing.png}
+  \caption{\footnotesize The $\dot{C} = 0$ nullcline (red) intersecting with the $\dot{\rho} = 0$ nullcline (black).  The trivial steady-state $(0,0)$ and non-trivial steady-state $(\bar{\rho}, \bar{C})$ are shown as red dots.}
+\end{figure}
+\vfill
+\columnbreak
+By placing Eq.\ (1) inside Eq.\ (2), we can find the intersection of the null-clines:
+\scriptsize
+\begin{align*}
+  \bar{\rho}(\bar{C}) &= \frac{F}{V \alpha k_{max}} \left( \frac{C_0 k_n}{\bar{C}} + C_0 - k_n - \bar{C} \right) \\
+  &= \frac{F}{V \alpha k_{max}} \left( \frac{C_0 k_n}{\frac{F k_n}{V k_{max} - F}} + C_0 - k_n - \frac{F k_n}{V k_{max} - F} \right) \\
+  &= \frac{F}{V \alpha k_{max}} \left( \frac{C_0(V k_{max} - F)}{F} + C_0 - k_n - \frac{F k_n}{V k_{max} - F} \right).
+\end{align*}
+\small
+The unknowns in this are $\alpha$, $k_{max}$, and $k_n$.  First, assume $\alpha = 1$.  With this assumption we can then minimize the difference between the equilibrium solution of the differential equations $\dot{\rho}$ and $\dot{C}$ (determined numerically) and the observed optical density for a given $F$ to provide an estimate for $\bar{C}$, which we can then plug into equations (1) and (2) to get $k_{max}$ and $k_n$.
+\end{multicols}
+
+The data we are provided with include two sets of two separate runs, along with the concentration of nutrient in the reservoir, $C_0 = 0.02$:
 \section{K1 Run}
 \subsection*{Vessel One :}
 \begin{center}
@@ -47,7 +109,7 @@ We are also provided with some data for the problem for two separate runs, along
 
 \subsection*{Vessel Two :}
 \begin{center}
-\begin{tabular}{l|ccccccc}
+a\begin{tabular}{l|ccccccc}
  Volumes/Hr & 0.0571 & 0.126 & 0.196 & 0.263 & 0.313 & 0.383  \\
   Optical Density at Steady State & 0.385 & 0.456 & 0.363 & 0.197 & 0.044 & 0.004 \\
 \end{tabular}

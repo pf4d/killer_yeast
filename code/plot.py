@@ -23,13 +23,13 @@ ax2 = fig.add_subplot(122)
 axs  = [ax1, ax2]
 ods  = [[sod1, sod2], [kod1, kod2]]
 vhs  = [[svh1, svh2], [kvh1, kvh2]]
-tits = [r'$S$', r'$K$']
+tits = [r'Sensitive', r'Killer']
 
 for ax, tit, od, vh in zip(axs, tits, ods, vhs):
   ax.plot(vh[0], od[0], 'ko', label='Vessel 1')
   ax.plot(vh[1], od[1], 'ro', label='Vessel 2')
-  ax.set_xlabel(r'Volumes/Hr')
-  ax.set_ylabel(r'Optical Density')
+  ax.set_xlabel(r'$F$ [Volumes/Hr]')
+  ax.set_ylabel(r'Optical Density $\rho$')
   ax.set_title(tit)
   ax.grid()
   leg = ax.legend()
