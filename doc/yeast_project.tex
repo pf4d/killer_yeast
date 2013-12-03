@@ -15,9 +15,9 @@ The differential equation we may use for modeling the growth of yeast is the sam
   \frac{dN}{dt} &= k(C) N - \frac{FN}{V}, \\
   \frac{dC}{dt} &= -\alpha k(C) N - \frac{FC}{V} + \frac{FC_0}{V},
 \end{align*}
-with initial conditions $C(0) = C_i$ and $N(0) = N_i$, $N$ is the number of yeast in the chamber in units number/volume, $C$ is the concentration of nutrient in the chamber with units mass/volume, $C_0$ is the concentration of nutrient in the reservoir, $F$ is the in/out flow rate with units volume/time, $V$ is the volume of the chamber, $\alpha$ is a unitless inverse of the yield constant, and $k(C)$ is the reproduction rate for yeast in units 1/time with possible formula chosen such that $\lim_{C \rightarrow \infty} = k_{max}$, and $k_{max}$ represents the maximum possible reproduction rate:
+with initial conditions $C(0) = C_i$ and $N(0) = N_i$, $N$ is the number of yeast in the chamber in units number/volume, $C$ is the concentration of nutrient in the chamber with units mass/volume, $C_0$ is the concentration of nutrient in the reservoir with units mass/volume, $F$ is the in/out flow rate with units volume/time, $V$ is the volume of the chamber, $\alpha$ is a unitless inverse of the yield constant, and $k(C)$ is the reproduction rate for yeast in units 1/time with possible formula chosen such that $\lim_{C \rightarrow \infty} = k_{max}$, and $k_{max}$ represents the maximum possible reproduction rate:
 $$k(C) = \frac{k_{max} C}{k_n + C}.$$
-where $k_n$ is chosen such that $k(k_n) = k_{max} / 2$.  Because the concentration in the tank $C(t)$ is related to the concentration in the reservoir by $C(t) \leq C_0$, and $C_0$ may be chosesn sufficiently small so that 
+where $k_n$ is chosen such that $k(k_n) = k_{max} / 2$.  Because the concentration in the tank $C(t)$ is related to the concentration in the reservoir by $C(t) \leq C_0$, $C_0$ may be chosen sufficiently small such that 
 \begin{align*}
   k(C) = \frac{k_{max} C}{k_n + C} \approx \frac{k_{max} C}{k_n} = KC.
 \end{align*}
@@ -59,12 +59,12 @@ Likewise, for $\dot{C} = 0$,
 \vfill
 \columnbreak
 By placing Eq.\ (3) inside Eq.\ (4), we can find the intersection of the null-clines:
-\begin{align*}
-  \bar{\rho}(\bar{C}) &= \frac{FC_0}{V \alpha K \bar{C}} - \frac{F}{V \alpha K} \\
-  &= \frac{FC_0}{V \alpha K \frac{F}{VK}} - \frac{F}{V \alpha K} \\
+\begin{align}
+  \bar{\rho}(\bar{C}) &= \frac{FC_0}{V \alpha K \bar{C}} - \frac{F}{V \alpha K}  \notag \\
+  &= \frac{FC_0}{V \alpha K \frac{F}{VK}} - \frac{F}{V \alpha K} \notag \\
   &= \frac{C_0}{\alpha} - \frac{F}{V \alpha K} = \frac{1}{\alpha} \left( C_0 - \frac{F}{VK} \right).
-\end{align*}
-The unknowns in this equation are $\alpha$ and $K$.  We can then minimize the difference between the equilibrium solution for $\rho$ determined from the differential equations $\dot{\rho}$ and $\dot{C}$ (determined numerically) and the observed optical density $\bar{\rho}$ for a given $F$ to provide an estimate for $\bar{C}$, $\alpha$, and $K$.
+\end{align}
+The unknown parameters in Eq (5) are $\alpha$ and $K$.  We can find these parameters by fitting Eq (5) to the data by non-linear least squares fitting $\bar{\rho}_i$ at $F_i$ for $i = 1,\ldots,n$, where $n$ is the number of observations.
 \end{multicols}
 
 After we have estimates for the initial conditions, $\alpha$ and $K$ (and hence $\bar{C}$), we can model a ``what if'' scenario where we put both species of yeast, sensitive and killer, into one chemostat.

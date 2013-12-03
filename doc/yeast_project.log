@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  3 DEC 2013 12:12
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  3 DEC 2013 12:49
 entering extended mode
  %&-line parsing enabled.
 **yeast_project.tex
@@ -503,7 +503,7 @@ File: images/data.png Graphic file (type png)
 Here is how much of TeX's memory you used:
  5288 strings out of 495061
  70341 string characters out of 1182620
- 146628 words of memory out of 3000000
+ 148628 words of memory out of 3000000
  8381 multiletter control sequences out of 15000+50000
  15414 words of font info for 58 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
@@ -519,7 +519,7 @@ cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb
 e/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
 fonts/cm/cmsy8.pfb>
-Output written on yeast_project.pdf (3 pages, 282402 bytes).
+Output written on yeast_project.pdf (3 pages, 282795 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
