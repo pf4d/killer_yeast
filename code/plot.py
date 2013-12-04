@@ -28,8 +28,8 @@ tits = [r'Sensitive', r'Killer']
 for ax, tit, od, vh in zip(axs, tits, ods, vhs):
   ax.plot(vh[0], od[0], 'ko', label='Vessel 1')
   ax.plot(vh[1], od[1], 'ro', label='Vessel 2')
-  ax.set_xlabel(r'$F$ [Volumes/Hr]')
-  ax.set_ylabel(r'Optical Density $\bar{\rho}$')
+  ax.set_xlabel(r'$F$ [volumes/hr]')
+  ax.set_ylabel(r'Optical Density $\bar{N}$ [unitless]')
   ax.set_title(tit)
   ax.grid()
   leg = ax.legend()

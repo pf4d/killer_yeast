@@ -15,59 +15,57 @@ The differential equation we may use for modeling the growth of yeast is the sam
   \frac{dN}{dt} &= k(C) N - \frac{FN}{V}, \\
   \frac{dC}{dt} &= -\alpha k(C) N - \frac{FC}{V} + \frac{FC_0}{V},
 \end{align*}
-with initial conditions $C(0) = C_i$ and $N(0) = N_i$, $N$ is the number of yeast in the chamber in units number/volume, $C$ is the concentration of nutrient in the chamber with units mass/volume, $C_0$ is the concentration of nutrient in the reservoir with units mass/volume, $F$ is the in/out flow rate with units volume/time, $V$ is the volume of the chamber, $\alpha$ is a unitless inverse of the yield constant, and $k(C)$ is the reproduction rate for yeast in units 1/time with possible formula chosen such that $\lim_{C \rightarrow \infty} = k_{max}$, and $k_{max}$ represents the maximum possible reproduction rate:
-$$k(C) = \frac{k_{max} C}{k_n + C}.$$
-where $k_n$ is chosen such that $k(k_n) = k_{max} / 2$.  Because the concentration in the tank $C(t)$ is related to the concentration in the reservoir by $C(t) \leq C_0$, $C_0$ may be chosen sufficiently small such that 
+with initial conditions $C(0) = C_i$ and $N(0) = N_i$, $N$ is the unitless optical density of yeast in the chamber, $C$ is the unitless optical density of nutrient in the chamber, $C_0$ is the unitless optical density of nutrient in the reservoir, $F$ is the in/out volume flow rate with units volume/time, $V$ is the volume of the chamber, $\alpha$ is a unitless inverse of the yield constant, and $k(C)$ is the reproduction rate for yeast in units 1/time with possible formula chosen such that $\lim_{C \rightarrow \infty} = k_{max}$, and $k_{max}$ represents the maximum possible reproduction rate:
+$$k(C) = \frac{k_{max} C}{C_n + C}.$$
+where $C_n$ is chosen such that $k(C_n) = k_{max} / 2$.  Because the concentration in the tank $C(t)$ is related to the concentration in the reservoir by $C(t) \leq C_0$, $C_0$ may be chosen sufficiently small such that 
 \begin{align*}
-  k(C) = \frac{k_{max} C}{k_n + C} \approx \frac{k_{max} C}{k_n} = KC.
+  k(C) = \frac{k_{max} C}{C_n + C} \approx \frac{k_{max} C}{C_n} = KC,
 \end{align*}
-Also, because the data is collected in density form, we propose solving for density $\rho = N/V$:
+where $K$ has units 1/time. The equations we need to solve then become 
 \begin{align}
-  \frac{d\rho}{dt} &= KC \rho - \frac{F\rho}{V}, \\
-  \frac{dC}{dt} &= -\alpha KC \rho - \frac{FC}{V} + \frac{FC_0}{V},
+  \frac{dN}{dt} &= KCN - \frac{FN}{V}, \\
+  \frac{dC}{dt} &= -\alpha KCN - \frac{FC}{V} + \frac{FC_0}{V}.
 \end{align}
-with initial conditions $\rho(0) = \rho_i$ and $C(0) = C_i$, and all other constants are identical as before.
-
-The quantitative measurement for fitness is a measurement of optical density at steady state (equilibrium) at a given flow rate ($F$) in volumes/hr.  In order to find the steady states, we have to find the intersections of the null-clines at equilibrium points $(\bar{\rho}, \bar{C})$, i.e.\ $d\bar{\rho}/dt = 0$ and $d\bar{C}/dt = 0$:
+The quantitative measurement for fitness is a unitless measurement of optical density at steady state ($N$) at a given flow rate ($F$) in volumes/hr.  In order to find the steady states, we have to find the intersections of the null-clines at equilibrium points $(\bar{N}, \bar{C})$, i.e.\ $d\bar{N}/dt = 0$ and $d\bar{C}/dt = 0$:
 \begin{align*}
-  \frac{d\rho(\bar{\rho}, \bar{C})}{dt} &= K\bar{C} \bar{\rho} - \frac{F\bar{\rho}}{V}, \\
-  &= \bar{\rho} \left( K\bar{C} - \frac{F}{V} \right) = 0, \\
+  \frac{dN(\bar{N}, \bar{C})}{dt} &= K\bar{C} \bar{N} - \frac{F\bar{N}}{V}, \\
+  &= \bar{N} \left( K\bar{C} - \frac{F}{V} \right) = 0, \\
 \end{align*}
-which is zero for $\bar{\rho} = 0$ or $K \bar{C} = F/V$.  Solving the other equation gives us the other steady-states:
+which is zero for $\bar{N} = 0$ or $K \bar{C} = F/V$.  Solving the other equation gives us the other steady-states:
 \begin{align*}
-  \frac{dC(\bar{\rho}, \bar{C})}{dt} &= -\alpha K \bar{C} \bar{\rho} - \frac{F\bar{C}}{V} + \frac{FC_0}{V} = 0,
+  \frac{dC(\bar{N}, \bar{C})}{dt} &= -\alpha K \bar{C} \bar{N} - \frac{F\bar{C}}{V} + \frac{FC_0}{V} = 0,
 \end{align*}
-which is zero for $\alpha K\bar{C} \bar{\rho} + \frac{F\bar{C}}{V} = \frac{FC_0}{V}$.
+which is zero for $\alpha K\bar{C} \bar{N} + \frac{F\bar{C}}{V} = \frac{FC_0}{V}$.
 
-In order to evaluate these null-clines, we need to evaluate the non-trivial cases, here for $\dot{\rho} = 0$,
+In order to evaluate these null-clines, we need to evaluate the non-trivial cases, here for $\dot{N} = 0$,
 \begin{align}
   K \bar{C} &= \frac{F}{V} \notag \\
   \implies \bar{C} &= \frac{F}{VK}.
 \end{align}
 Likewise, for $\dot{C} = 0$,
 \begin{align}
-  \alpha K \bar{C} \bar{\rho} + \frac{F\bar{C}}{V} &= \frac{FC_0}{V} \notag \\
-  \implies \bar{\rho} &= \frac{FC_0}{V \alpha K \bar{C}} - \frac{F}{V \alpha K} = \frac{F}{V \alpha K} \left(\frac{C_0}{\bar{C}} - 1 \right).
+  \alpha K \bar{C} \bar{N} + \frac{F\bar{C}}{V} &= \frac{FC_0}{V} \notag \\
+  \implies \bar{N} &= \frac{FC_0}{V \alpha K \bar{C}} - \frac{F}{V \alpha K} = \frac{F}{V \alpha K} \left(\frac{C_0}{\bar{C}} - 1 \right).
 \end{align}
 
 \begin{multicols}{2}
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.40\textwidth]{images/drawing.png}
-  \caption{\footnotesize The $\dot{C} = 0$ nullcline (red) intersecting with the $\dot{\rho} = 0$ nullcline (black).  The trivial steady-state $(0,0)$ and non-trivial steady-state $(\bar{\rho}, \bar{C})$ are shown as red dots.}
+  \caption{\footnotesize The $\dot{C} = 0$ nullcline (red) intersecting with the $\dot{N} = 0$ nullcline (black).  The trivial steady-state $(0,0)$ and non-trivial steady-state $(\bar{N}, \bar{C})$ are shown as red dots.}
 \end{figure}
 \vfill
 \columnbreak
 By placing Eq.\ (3) inside Eq.\ (4), we can find the intersection of the null-clines:
 \begin{align}
-  \bar{\rho}(\bar{C}) &= \frac{FC_0}{V \alpha K \bar{C}} - \frac{F}{V \alpha K}  \notag \\
+  \bar{N}(\bar{C}) &= \frac{FC_0}{V \alpha K \bar{C}} - \frac{F}{V \alpha K}  \notag \\
   &= \frac{FC_0}{V \alpha K \frac{F}{VK}} - \frac{F}{V \alpha K} \notag \\
   &= \frac{C_0}{\alpha} - \frac{F}{V \alpha K} = \frac{1}{\alpha} \left( C_0 - \frac{F}{VK} \right).
 \end{align}
-The unknown parameters in Eq (5) are $\alpha$ and $K$.  We can find these parameters by fitting Eq (5) to the data by non-linear least squares fitting $\bar{\rho}_i$ at $F_i$ for $i = 1,\ldots,n$, where $n$ is the number of observations.
+The unknown parameters in Eq (5) are $\alpha$ and $K$.  We can find these parameters by fitting Eq (5) to the data by non-linear least squares fitting $\bar{N}_i$ at $F_i$ for $i = 1,\ldots,n$, where $n$ is the number of observations.
 \end{multicols}
 
-After we have estimates for the initial conditions, $\alpha$ and $K$ (and hence $\bar{C}$), we can model a ``what if'' scenario where we put both species of yeast, sensitive and killer, into one chemostat.
+After we obtain estimates for $\alpha$ and $K$ (and hence $\bar{C}$), we can model a ``what if'' scenario whereby we place both species of yeast, sensitive and killer, into one chemostat.
 
 \newpage
 
@@ -106,11 +104,19 @@ a\begin{tabular}{l|ccccccc}
 \end{tabular}
 \end{center}
 
-
 \begin{figure}[H]
   \centering
     \includegraphics[width=1.0\textwidth]{images/data.png}
 \end{figure}
+
+The data provided does not include the volume of the chamber, $V$.  In order to solve Eq.\ (5), this quantity is needed.  Here we have dimensional analysis of the problem:
+
+\begin{align*}
+  \frac{dN}{dt} &= KCN - \frac{FN}{V} \\
+  \equiv \left[ \frac{1}{\text{time}} \right] &\equiv \left[ \frac{1}{\text{time}} - \frac{\text{volume}}{\text{time}} \cdot \frac{1}{\text{volume}} \right] \equiv \left[ \frac{1}{\text{time}} \right], \\
+  \frac{dC}{dt} &= -\alpha KCN - \frac{FC}{V} + \frac{FC_0}{V} \\
+  \equiv \left[ \frac{1}{\text{time}} \right] &\equiv \left[ -\frac{1}{\text{time}} - \frac{\text{volume}}{\text{time}} \cdot \frac{1}{\text{volume}} + \frac{\text{volume}}{\text{time}} \cdot \frac{1}{\text{volume}} \right] \equiv \left[ \frac{1}{\text{time}} \right].
+\end{align*}
 
 \end{document}
 
