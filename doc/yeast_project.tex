@@ -26,7 +26,7 @@ where $K$ has units 1/time. The equations we need to solve then become
   \frac{dN}{dt} &= KCN - \frac{FN}{V}, \\
   \frac{dC}{dt} &= -\alpha KCN - \frac{FC}{V} + \frac{FC_0}{V}.
 \end{align}
-The quantitative measurement for fitness is a unitless measurement of optical density at steady state ($N$) at a given flow rate ($F$) in volumes/hr.  In order to find the steady states, we have to find the intersections of the null-clines at equilibrium points $(\bar{N}, \bar{C})$, i.e.\ $d\bar{N}/dt = 0$ and $d\bar{C}/dt = 0$:
+The quantitative measurement for fitness is a unitless measurement of optical density at steady state ($N$) at a given flow rate ($F$) in volumes/hr.  In order to find the steady states, we have to find the intersections of the null-clines at equilibrium points $(\bar{N}, \bar{C})$, i.e.\ $dN(\bar{N},\bar{C})/dt = 0$ and $dC(\bar{N},\bar{C})/dt = 0$:
 \begin{align*}
   \frac{dN(\bar{N}, \bar{C})}{dt} &= K\bar{C} \bar{N} - \frac{F\bar{N}}{V}, \\
   &= \bar{N} \left( K\bar{C} - \frac{F}{V} \right) = 0, \\
@@ -47,16 +47,17 @@ Likewise, for $\dot{C} = 0$,
   \alpha K \bar{C} \bar{N} + \frac{F\bar{C}}{V} &= \frac{FC_0}{V} \notag \\
   \implies \bar{N} &= \frac{FC_0}{V \alpha K \bar{C}} - \frac{F}{V \alpha K} = \frac{F}{V \alpha K} \left(\frac{C_0}{\bar{C}} - 1 \right).
 \end{align}
+This intersects the $\bar{N} = 0$ nullcline at $\frac{F}{V\alpha K} = 0$ or $\frac{C_0}{\bar{C}} = 1$.  However, because $F$ is never 0, we can disregard the first equation, and we know that the only trivial steady-state is located at $\bar{N} = 0$, $\bar{C} = C_0$.
 
 \begin{multicols}{2}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.40\textwidth]{images/drawing.png}
-  \caption{\footnotesize The $\dot{C} = 0$ nullcline (red) intersecting with the $\dot{N} = 0$ nullcline (black).  The trivial steady-state $(0,0)$ and non-trivial steady-state $(\bar{N}, \bar{C})$ are shown as red dots.}
+    \includegraphics[width=0.35\textwidth]{images/drawing.png}
+  \caption{\footnotesize The $\dot{C} = 0$ nullcline (dashed red) intersecting with the $\dot{N} = 0$ nullcline (dashed black).  The trivial and non-trivial steady-states $(0, C_0)$ and $(\bar{N}, \bar{C})$ are shown as red dots.}
 \end{figure}
 \vfill
 \columnbreak
-By placing Eq.\ (3) inside Eq.\ (4), we can find the intersection of the null-clines:
+By placing Eq.\ (3) inside Eq.\ (4), we can find the non-trivial steady-state, the intersection of null-clines:
 \begin{align}
   \bar{N}(\bar{C}) &= \frac{FC_0}{V \alpha K \bar{C}} - \frac{F}{V \alpha K}  \notag \\
   &= \frac{FC_0}{V \alpha K \frac{F}{VK}} - \frac{F}{V \alpha K} \notag \\
@@ -65,11 +66,7 @@ By placing Eq.\ (3) inside Eq.\ (4), we can find the intersection of the null-cl
 The unknown parameters in Eq (5) are $\alpha$ and $K$.  We can find these parameters by fitting Eq (5) to the data by non-linear least squares fitting $\bar{N}_i$ at $F_i$ for $i = 1,\ldots,n$, where $n$ is the number of observations.
 \end{multicols}
 
-After we obtain estimates for $\alpha$ and $K$ (and hence $\bar{C}$), we can model a ``what if'' scenario whereby we place both species of yeast, sensitive and killer, into one chemostat.
-
-\newpage
-
-The data we are provided with include two sets of two separate runs, along with the concentration of nutrient in the reservoir, $C_0 = 0.02$:
+After we obtain estimates for $\alpha$ and $K$ (and hence $\bar{C}$), we can model a ``what if'' scenario whereby we place both species of yeast, sensitive and killer, into one chemostat.  The data we are provided with include two sets of two separate runs, along with the concentration of nutrient in the reservoir, $C_0 = 0.02$:
 \section{K1 Run}
 \subsection*{Vessel One :}
 \begin{center}
