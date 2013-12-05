@@ -68,9 +68,9 @@ The unknown parameters in Eq (5) are $\alpha$ and $K$.  We can find these parame
 
 After we obtain estimates of these parameters for both the killer yeast $L$ and sensitive yeast $S$, ($\alpha_L$, $\alpha_S$ and $K_L$, $K_S$ respectively), we can model a ``what if'' scenario whereby we place both species of yeast, sensitive and killer, into one chemostat (assuming the sensitive yeast are resistant to the killer yeast toxin).  The differential equations we use to solve this three-species model is
 \begin{align}
-  \frac{dL}{dt} &= KCL - \frac{FL}{V}, \\
-  \frac{dS}{dt} &= KCS - \frac{FS}{V}, \\
-  \frac{dC}{dt} &= -\alpha_L KCL -\alpha_S KCS - \frac{FC}{V} + \frac{FC_0}{V}.
+  \frac{dL}{dt} &= K_L CL - \frac{FL}{V}, \\
+  \frac{dS}{dt} &= K_S CS - \frac{FS}{V}, \\
+  \frac{dC}{dt} &= -\alpha_L K_L CL -\alpha_S K_S CS - \frac{FC}{V} + \frac{FC_0}{V}.
 \end{align}
 
 
