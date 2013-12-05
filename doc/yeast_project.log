@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  4 DEC 2013 16:39
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  5 DEC 2013 12:28
 entering extended mode
  %&-line parsing enabled.
 **yeast_project.tex
@@ -488,18 +488,18 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 File: images/drawing.png Graphic file (type png)
  <use images/drawing.png>
 [2 <./images/drawing.png>]
-Overfull \hbox (28.63339pt too wide) in paragraph at lines 81--85
+Overfull \hbox (28.63339pt too wide) in paragraph at lines 89--93
  [] 
  []
 
 
-Overfull \hbox (28.63339pt too wide) in paragraph at lines 90--94
+Overfull \hbox (28.63339pt too wide) in paragraph at lines 98--102
  [] 
  []
 
 <images/data.png, id=23, 722.7pt x 361.35pt>
 File: images/data.png Graphic file (type png)
- <use images/data.png> [3 <./images/data.png>] [4] (./yeast_project.aux) ) 
+ <use images/data.png> [3] [4 <./images/data.png>] (./yeast_project.aux) ) 
 Here is how much of TeX's memory you used:
  5288 strings out of 495061
  70341 string characters out of 1182620
@@ -520,7 +520,7 @@ xlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/t
 ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
 cmsy8.pfb>
-Output written on yeast_project.pdf (4 pages, 298720 bytes).
+Output written on yeast_project.pdf (4 pages, 300288 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

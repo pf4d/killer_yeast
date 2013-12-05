@@ -66,7 +66,15 @@ By placing Eq.\ (3) inside Eq.\ (4), we can find the non-trivial steady-state, t
 The unknown parameters in Eq (5) are $\alpha$ and $K$.  We can find these parameters by fitting Eq (5) to the data by non-linear least squares fitting $\bar{N}_i$ at $F_i$ for $i = 1,\ldots,n$, where $n$ is the number of observations.
 \end{multicols}
 
-After we obtain estimates for $\alpha$ and $K$ (and hence $\bar{C}$), we can model a ``what if'' scenario whereby we place both species of yeast, sensitive and killer, into one chemostat.  The data we are provided with include two sets of two separate runs, along with the concentration of nutrient in the reservoir, $C_0 = 0.02$:
+After we obtain estimates of these parameters for both the killer yeast $L$ and sensitive yeast $S$, ($\alpha_L$, $\alpha_S$ and $K_L$, $K_S$ respectively), we can model a ``what if'' scenario whereby we place both species of yeast, sensitive and killer, into one chemostat (assuming the sensitive yeast are resistant to the killer yeast toxin).  The differential equations we use to solve this three-species model is
+\begin{align}
+  \frac{dL}{dt} &= KCL - \frac{FL}{V}, \\
+  \frac{dS}{dt} &= KCS - \frac{FS}{V}, \\
+  \frac{dC}{dt} &= -\alpha_L KCL -\alpha_S KCS - \frac{FC}{V} + \frac{FC_0}{V}.
+\end{align}
+
+
+The data we are provided with include two sets of two separate runs, along with the concentration of nutrient in the reservoir, $C_0 = 0.02$:
 \section{K1 Run}
 \subsection*{Vessel One :}
 \begin{center}
