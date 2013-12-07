@@ -66,10 +66,10 @@ By placing Eq.\ (3) inside Eq.\ (4), we can find the non-trivial steady-state, t
 The unknown parameters in Eq (5) are $\alpha$ and $K$.  We can find these parameters by fitting Eq (5) to the data by non-linear least squares fitting $\bar{N}_i$ at $F_i$ for $i = 1,\ldots,n$, where $n$ is the number of observations.
 \end{multicols}
 
-After we obtain estimates of these parameters for both the killer yeast $L$ and sensitive yeast $S$, ($\alpha_L$, $\alpha_S$ and $K_L$, $K_S$ respectively), we can model a ``what if'' scenario whereby we place both species of yeast, sensitive and killer, into one chemostat (assuming the sensitive yeast are resistant to the killer yeast toxin).  The differential equations we use to solve this three-species model is
+After we obtain estimates of these parameters for both the killer yeast $L$ and sensitive yeast $S$, ($\alpha_L$, $\alpha_S$ and $K_L$, $K_S$ respectively), we can model a ``what if'' scenario whereby we place both species of yeast, sensitive and killer, into one chemostat.  The population of sensitive yeast $S$ will be negatively impacted by the amount of toxin the killer yeast $K$ can produce, so we add the term $-\beta K L$ to the differential equation describing population $S$.  The differential equations we use to solve this three-species model is
 \begin{align}
   \frac{dL}{dt} &= K_L CL - \frac{FL}{V}, \\
-  \frac{dS}{dt} &= K_S CS - \frac{FS}{V}, \\
+  \frac{dS}{dt} &= K_S CS - \frac{FS}{V} - \beta S L, \\
   \frac{dC}{dt} &= -\alpha_L K_L CL -\alpha_S K_S CS - \frac{FC}{V} + \frac{FC_0}{V}.
 \end{align}
 
