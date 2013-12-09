@@ -77,37 +77,29 @@ After we obtain estimates of these parameters for both the killer yeast $L$ and 
 The data we are provided with include two sets of two separate runs, along with the concentration of nutrient in the reservoir, $C_0 = 0.02$:
 \section{K1 Run}
 \subsection*{Vessel One :}
-\begin{center}
 \begin{tabular}{l|cccccccc}
   Volumes/Hr & 0.028 & 0.099 & 0.142 & 0.207 & 0.269 & 0.287 & 0.352 & 0.403 \\
   Optical Density at Steady State & 0.144 & 0.151 & 0.099 & 0.069 & 0.045 & 0.02 & 0.003 & 0 \\
 \end{tabular}
-\end{center}
 
 \subsection*{Vessel Two :}
-\begin{center}
 \begin{tabular}{l|ccccccccc}
   Volumes/Hr & 0.054 & 0.11 & 0.141 & 0.199 & 0.257 & 0.296 & 0.348 & 0.397 & 0.41 \\
   Optical Density at Steady State & 0.164 & 0.151 & 0.11 & 0.092 & 0.072 & 0.023 & 0.006 & 0.002 & 0.004 \\
 \end{tabular}
-\end{center}
 
 \section{Sensitive Run}
 \subsection*{Vessel One :}
-\begin{center}
 \begin{tabular}{l|ccccccccc}
   Volumes/Hr & 0.041 & 0.099 & 0.167 & 0.223 & 0.266 & 0.328 & 0.356 & 0.401 & 0.462 \\
  Optical Density at Steady State & 0.54 & 0.494 & 0.459 & 0.395 & 0.229 & 0.019 & 0.006 & 0.003 & 0  \\
 \end{tabular}
-\end{center}
 
 \subsection*{Vessel Two :}
-\begin{center}
-a\begin{tabular}{l|ccccccc}
+\begin{tabular}{l|ccccccc}
  Volumes/Hr & 0.0571 & 0.126 & 0.196 & 0.263 & 0.313 & 0.383  \\
   Optical Density at Steady State & 0.385 & 0.456 & 0.363 & 0.197 & 0.044 & 0.004 \\
 \end{tabular}
-\end{center}
 
 \begin{figure}[H]
   \centering
@@ -122,6 +114,48 @@ The data provided does not include the volume of the chamber, $V$.  In order to 
   \frac{dC}{dt} &= -\alpha KCN - \frac{FC}{V} + \frac{FC_0}{V} \\
   \equiv \left[ \frac{1}{\text{time}} \right] &\equiv \left[ -\frac{1}{\text{time}} - \frac{\text{volume}}{\text{time}} \cdot \frac{1}{\text{volume}} + \frac{\text{volume}}{\text{time}} \cdot \frac{1}{\text{volume}} \right] \equiv \left[ \frac{1}{\text{time}} \right].
 \end{align*}
+
+Here's the best fit lines:
+\begin{multicols}{2}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.5\textwidth]{images/sensitiveFit.jpg}
+\end{figure}
+\begin{center}
+\begin{tabular}{l | c c c}
+  & Estimates & SE & CI \\ 
+  \hline
+  $\alpha_L$ & 0.1124  & 0.0053 & (0.0969,  0.1279) \\
+  $K_L$      & 19.0288 & 0.6367 & (17.1526, 20.905) \\
+\end{tabular}
+\end{center}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.5\textwidth]{images/killerFit.jpg}
+\end{figure}
+\begin{center}
+\begin{tabular}{l | c c c}
+  & Estimates & SE & CI \\ 
+  \hline
+  $\alpha_S$ & 0.0325  & 0.0024 & (0.0255,  0.0399) \\
+  $K_S$      & 20.1818 & 1.0802 & (16.9281, 23.4356) \\
+\end{tabular}
+\end{center}
+\end{multicols}
+
+Here's the dynamics solution:
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{images/sols.png}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{images/3d.png}
+\end{figure}
+
 
 \end{document}
 

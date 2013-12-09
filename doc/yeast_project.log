@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  6 DEC 2013 15:22
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.8.10)  8 DEC 2013 15:40
 entering extended mode
  %&-line parsing enabled.
 **yeast_project.tex
@@ -488,41 +488,325 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 File: images/drawing.png Graphic file (type png)
  <use images/drawing.png>
 [2 <./images/drawing.png>]
-Overfull \hbox (28.63339pt too wide) in paragraph at lines 89--93
- [] 
+Overfull \hbox (28.63339pt too wide) in paragraph at lines 86--90
+[] 
  []
 
 
-Overfull \hbox (28.63339pt too wide) in paragraph at lines 98--102
- [] 
+Overfull \hbox (28.63339pt too wide) in paragraph at lines 93--97
+[] 
  []
 
 <images/data.png, id=23, 722.7pt x 361.35pt>
 File: images/data.png Graphic file (type png)
- <use images/data.png> [3] [4 <./images/data.png>] (./yeast_project.aux) ) 
+ <use images/data.png> [3]
+<images/sensitiveFit.jpg, id=27, 511.9125pt x 385.44pt>
+File: images/sensitiveFit.jpg Graphic file (type jpg)
+
+<use images/sensitiveFit.jpg>
+Overfull \hbox (5.0pt too wide) in paragraph at lines 122--123
+ [][] 
+ []
+
+
+Overfull \vbox (69.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (68.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (67.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (66.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (65.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (64.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (63.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (62.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (61.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (60.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (59.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (58.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (57.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (56.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (55.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (54.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (53.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (52.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (51.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (50.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (49.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (48.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (47.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (46.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (45.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (44.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (43.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (42.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (41.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (40.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (39.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (38.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (37.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (36.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (35.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (34.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (33.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (32.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (31.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (30.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (29.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (28.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (27.64575pt too high) has occurred while \output is active []
+
+
+[4 <./images/data.png> <./images/sensitiveFit.jpg>]
+<images/killerFit.jpg, id=32, 511.9125pt x 385.44pt>
+File: images/killerFit.jpg Graphic file (type jpg)
+
+<use images/killerFit.jpg>
+Overfull \hbox (5.0pt too wide) in paragraph at lines 137--138
+ [][] 
+ []
+
+
+Overfull \vbox (69.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (68.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (67.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (66.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (65.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (64.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (63.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (62.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (61.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (60.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (59.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (58.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (57.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (56.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (55.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (54.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (53.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (52.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (51.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (50.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (49.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (48.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (47.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (46.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (45.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (44.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (43.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (42.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (41.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (40.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (39.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (38.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (37.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (36.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (35.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (34.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (33.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (32.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (31.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (30.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (29.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (28.64575pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (27.64575pt too high) has occurred while \output is active []
+
+
+<images/sols.png, id=33, 1084.05pt x 361.35pt>
+File: images/sols.png Graphic file (type png)
+ <use images/sols.png>
+<images/3d.png, id=34, 586.8324pt x 442.2924pt>
+File: images/3d.png Graphic file (type png)
+ <use images/3d.png> [5 <./images/killerFit.jpg> <./images/sols.png>] [6 <./ima
+ges/3d.png>]
+(./yeast_project.aux) ) 
 Here is how much of TeX's memory you used:
- 5288 strings out of 495061
- 70341 string characters out of 1182620
+ 5309 strings out of 495061
+ 70748 string characters out of 1182621
  149628 words of memory out of 3000000
- 8381 multiletter control sequences out of 15000+50000
+ 8397 multiletter control sequences out of 15000+50000
  15414 words of font info for 58 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  29i,12n,46p,827b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr
-/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texm
-f-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/
-public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12
-.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/s
-hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb>
-Output written on yeast_project.pdf (4 pages, 300959 bytes).
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on yeast_project.pdf (6 pages, 709486 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
