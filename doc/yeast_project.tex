@@ -115,26 +115,12 @@ The data provided does not include the volume of the chamber, $V$.  In order to 
   \equiv \left[ \frac{1}{\text{time}} \right] &\equiv \left[ -\frac{1}{\text{time}} - \frac{\text{volume}}{\text{time}} \cdot \frac{1}{\text{volume}} + \frac{\text{volume}}{\text{time}} \cdot \frac{1}{\text{volume}} \right] \equiv \left[ \frac{1}{\text{time}} \right].
 \end{align*}
 
-Here's the best fit lines:
+Taking $V = 1$, we can solve Eq.\ (5) using MatLab's \texttt{nlinfit} function.  The results of this are shown below for both sensitive and killer yeast.
 \begin{multicols}{2}
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/sensitiveFit.jpg}
-\end{figure}
-\begin{center}
-\begin{tabular}{l | c c c}
-  & Estimates & SE & CI \\ 
-  \hline
-  $\alpha_L$ & 0.1124  & 0.0053 & (0.0969,  0.1279) \\
-  $K_L$      & 19.0288 & 0.6367 & (17.1526, 20.905) \\
-\end{tabular}
-\end{center}
-\end{multicols}
-
-\begin{multicols}{2}
-\begin{figure}[H]
-  \centering
-    \includegraphics[width=0.5\textwidth]{images/killerFit.jpg}
+  \caption{\footnotesize Sensitive yeast $S$ steady-state best-fit line using Eq.\ (5).}
 \end{figure}
 \begin{center}
 \begin{tabular}{l | c c c}
@@ -144,18 +130,44 @@ Here's the best fit lines:
   $K_S$      & 20.1818 & 1.0802 & (16.9281, 23.4356) \\
 \end{tabular}
 \end{center}
+The results on the left show that there may be a better fit to the data than Eq.\ (5).  Notice that elimination of the last few data points corresponding to high $F$ may be removed; this would reduce the standard error and hence provide a better estimate for $\alpha_L$ and $K_L$.
 \end{multicols}
 
-Here's the dynamics solution:
+\begin{multicols}{2}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.5\textwidth]{images/killerFit.jpg}
+  \caption{\footnotesize Killer yeast $L$ steady-state best-fit line using Eq.\ (5).}
+\end{figure}
+\begin{center}
+\begin{tabular}{l | c c c}
+  & Estimates & SE & CI \\ 
+  \hline
+  $\alpha_L$ & 0.1124  & 0.0053 & (0.0969,  0.1279) \\
+  $K_L$      & 19.0288 & 0.6367 & (17.1526, 20.905) \\
+\end{tabular}
+\end{center}
+The best-fit line on the left shows that steady-state data follows a fairly linear relationship with flow, and as such we can be confident our estimates for $\alpha_L$ and $K_L$ are correct.
+\end{multicols}
+
+Now that we have estimates for all values of $\alpha$ and $K$ (for both killer and sensitive yeast) we can run the dynamic model (6), (7), and (8) to equilibrium.  By letting $\beta$ range from 0 to 0.5 (in units 1/time), and $F$ range from 0 to 0.5 (in units volume/time), we can run the model for each $\beta$ and $F$ to determine the regions in the $\beta$, $F$ plane where sensitive yeast $S$ overtakes the killer yeast $L$ and vice versa.
 \begin{figure}[H]
   \centering
     \includegraphics[width=1.0\textwidth]{images/sols.png}
+  \caption{\footnotesize $250 \times 250$ steady-state optical density solution for killer yeast (left), sensitive yeast (middle) and nutrient (right) for a total run time of 40,000 hours.  Equations (6), (7), and (8) were solved with the Dormand-Prince numerical integration algorithm with an absolute tolerance of 1e-6, relative tolerance of 1e-6, and timestep $\Delta t$ of 500 hours.  The timestep was kept high due to the $250 \times 250 = 62,500$ simulations required to complete the figure.  In order to keep the total time to complete the simulation minimized, parallel processing was requied.}
 \end{figure}
+
+Notice in Figure 4 that as $\beta$ increases the killer yeast dominates and sensitive yeast eventually dies off, while as $F$ increases the sensitive yeast dominates and the killer yeast eventually dies out.  The sensitive yeast are flushed from the container at around $F = 0.4$ volumes/hr.
+
 \begin{figure}[H]
   \centering
     \includegraphics[width=1.0\textwidth]{images/3d.png}
 \end{figure}
 
+
+\section*{Source Code:}
+
+\pythonexternal{/home/pf4d/Documents/ode_plot/example/killerYeast.py}
 
 \end{document}
 
