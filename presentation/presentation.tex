@@ -195,7 +195,7 @@ MATH 445 - Statistical, Dynamical, and Computational Modeling}
 
 %% frame =======================================================================
 \begin{frame}
-  \frametitle{What-If Scenario}
+  \frametitle{What-if Scenario}
   Now that we have obtained estimates of the parameters for both the killer yeast $L$ and sensitive yeast $S$, ($\alpha_L$, $\alpha_S$ and $K_L$, $K_S$ respectively), we model a ``what if'' scenario whereby we place both species of yeast, sensitive and killer, into one chemostat.  The differential equations we use to solve this three-species model is
   \begin{align}
     \frac{dL}{dt} &= K_L CL - \frac{FL}{V}, \\
@@ -207,7 +207,7 @@ MATH 445 - Statistical, Dynamical, and Computational Modeling}
 %% frame =======================================================================
 \begin{frame}
   \frametitle{What-if Scenario}
-  We can run the dynamic model (6), (7), and (8) to equilibrium.  By letting $\beta$ range from 0 to 0.5 (in units 1/time), and $F$ range from 0 to 0.5 (in units volume/time), we can run the model for each $\beta$ and $F$ to determine the regions in the $\beta$, $F$ plane where sensitive yeast $S$ overtakes the killer yeast $L$ and vice versa.
+  We can run the dynamic model (6), (7), and (8) to equilibrium.  By letting $\beta$ range from 0 to 0.5 (in units 1/time), and $F$ range from 0 to 0.5 (in units volume/time), we can run the model for each $\beta$ and $F$ to determine the regions in the $\beta$, $F$ plane where sensitive yeast $S$ overtake the killer yeast $L$ and vice versa.
 \end{frame}
 
 %% frame =======================================================================
@@ -216,7 +216,7 @@ MATH 445 - Statistical, Dynamical, and Computational Modeling}
   \begin{figure}[H]
     \centering
       \includegraphics[width=1.0\textwidth]{../doc/images/sols.png}
-    \caption{\footnotesize $250 \times 250$ steady-state optical density solution for killer yeast (left), sensitive yeast (middle) and nutrient (right) for a total run time of 40,000 hours.  Equations (6), (7), and (8) were solved with the Dormand-Prince numerical integration algorithm with an absolute tolerance of 1e-6, relative tolerance of 1e-6, and timestep $\Delta t$ of 500 hours.  The timestep was kept high due to the $250 \times 250 = 62,500$ simulations required to complete the figure.  In order to keep the total time to complete the simulation minimized, parallel processing was required.}
+    \caption{\footnotesize $250 \times 250$ steady-state optical density solution for killer yeast (left), sensitive yeast (middle) and nutrient (right) for a total run time of 40,000 hours.  Equations (6), (7), and (8) were solved with the Dormand-Prince numerical integration algorithm with an absolute tolerance of 1e-6, relative tolerance of 1e-6, and timestep $\Delta t$ of 500 hours.  The timestep was kept high due to the $250 \times 250 = 62,500$ simulations required to complete the figure. Parallel processing was also implemented to speed up the simulation.}
   \end{figure}  
 \end{frame}
 

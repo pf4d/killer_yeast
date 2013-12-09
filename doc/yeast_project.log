@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  9 DEC 2013 14:46
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  9 DEC 2013 14:52
 entering extended mode
  %&-line parsing enabled.
 **yeast_project.tex
@@ -654,7 +654,7 @@ Here is how much of TeX's memory you used:
  9016 multiletter control sequences out of 15000+50000
  16216 words of font info for 62 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 29i,12n,46p,1130b,1848s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,12n,46p,1125b,1848s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/pf4d/.texmf-var/fonts/pk/ljfour/jknappen/ec/tctt
 0800.600pk></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
@@ -669,7 +669,7 @@ s/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texmf-texlive/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
 nts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt1
 0.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on yeast_project.pdf (10 pages, 782705 bytes).
+Output written on yeast_project.pdf (10 pages, 782680 bytes).
 PDF statistics:
  111 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
