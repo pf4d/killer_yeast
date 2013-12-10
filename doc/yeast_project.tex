@@ -162,8 +162,87 @@ Notice in Figure 4 that as $\beta$ increases the killer yeast dominates and sens
 \begin{figure}[H]
   \centering
     \includegraphics[width=1.0\textwidth]{images/3d.png}
+  \caption{\footnotesize 3D solution depicting killer yeast (red) and sensitive yeast (black) steady-states.}
 \end{figure}
 
+\section*{Steady-State regions}
+
+In order to evaluate the steady-state solutions, we need to equate Equations (6), (7), and (8) to zero and solve:
+\begin{align}
+  \frac{d}{dt}L(\bar{L}, \bar{S}, \bar{C}) &= K_L \bar{C}\bar{L} - \frac{F\bar{L}}{V} = 0, \\
+  \frac{d}{dt}S(\bar{L}, \bar{S}, \bar{C}) &= K_S \bar{C}\bar{S} - \frac{F\bar{S}}{V} - \beta \bar{S} \bar{L} = 0, \\
+  \frac{d}{dt}C(\bar{L}, \bar{S}, \bar{C}) &= -\alpha_L K_L \bar{C}\bar{L} -\alpha_S K_S \bar{C}\bar{S} - \frac{F\bar{C}}{V} + \frac{FC_0}{V} = 0.
+\end{align}
+
+From Eq.\ (9), we see that $\bar{L}(K_L \bar{C} - F/V) = 0$, and thus $\bar{L} = 0$ or $\bar{C} = F/(K_L V)$.  For each of these steady-states, we will evaluate Equations (10) and (11) to find the qualitative behavior of the steady-states.
+
+\subsection*{1  $\bar{L} = 0$:}
+
+  From (10), $\bar{S}(K_S \bar{C} - F/V - \beta \bar{L}) = 0$, so $\bar{S} = 0$ or $\bar{C} = \frac{F/V + \beta \bar{L}}{K_S} = \frac{F}{K_S V}$.
+  
+  \begin{enumerate}
+
+    \item $\bar{S} = 0$:
+      
+    From (11), 
+    \begin{align*}
+      -\alpha_L K_L \bar{C}\bar{L} -\alpha_S K_S \bar{C}\bar{S} - \frac{F\bar{C}}{V} + \frac{FC_0}{V} = 0 \\
+      -\frac{F\bar{C}}{V} + \frac{FC_0}{V} = 0, \hspace{5mm} F/V \neq 0.
+    \end{align*}
+    Thus $\bar{C} = C_0$, and the first steady-state is {\color{red}$(0,0,C_0)$}.  Call this {\color{red}Steady-State I}.
+
+    \item $\bar{C} = \frac{F}{K_S V}$:
+
+    From (11), 
+    
+    \begin{align*}
+      -\alpha_S K_S \left( \frac{F}{K_S V} \right) \bar{S} - \frac{F}{V} \left( \frac{F}{K_S V} \right) + \frac{FC_0}{V} &= 0 \\
+      -\alpha_S \left( \frac{F}{V} \right) \bar{S} - \frac{F}{V} \left( \frac{F}{K_S V} \right) + \frac{FC_0}{V} &= 0 \\
+      \alpha_S \left( \frac{F}{V} \right) \bar{S} &= \frac{F}{V} \left( \frac{F}{K_S V} \right) - \frac{FC_0}{V} \\
+      \alpha_S \bar{S} &= \frac{F}{K_S V} - C_0 \\
+      \bar{S} &= \frac{F}{K_S V \alpha_S} - \frac{C_0}{\alpha_S}. \\
+    \end{align*}
+    Therefore, the second steady-state is {\color{red}$\left(0, \frac{F}{K_S V \alpha_S} - \frac{C_0}{\alpha_S}, \frac{F}{K_S V} \right)$}.  Call this {\color{red}Steady-State II}. 
+  \end{enumerate}
+
+\subsection*{2  $\bar{C} = \frac{F}{K_L V}$:}
+
+  From (10), 
+  \begin{align*}
+    \bar{S}\left( K_S \bar{C} - \frac{F}{V} - \beta \bar{L} \right) = 0 \\
+    \bar{S}\left( K_S \frac{F}{K_L V} - \frac{F}{V} - \beta \bar{L} \right) = 0.
+  \end{align*}
+  So $\bar{S} = 0$ or $\bar{L} = \frac{K_S F}{K_L V \beta} - \frac{F}{V \beta}$.
+  
+  \begin{enumerate}
+
+    \item $\bar{S} = 0$:
+      
+    From (11), 
+    \begin{align*}
+      -\alpha_L K_L \bar{C}\bar{L} -\alpha_S K_S \bar{C}\bar{S} - \frac{F\bar{C}}{V} + \frac{FC_0}{V} &= 0 \\
+      -\alpha_L \left( \frac{F}{K_L V} \right) \bar{L} - \frac{F}{V} \left( \frac{F}{K_L V} \right) + \frac{FC_0}{V} &= 0 \\
+      \alpha_L \left( \frac{F}{V} \right) \bar{L} &= \frac{FC_0}{V} - \frac{F}{V} \left( \frac{F}{K_L V} \right) \\
+      \alpha_L \bar{L} &= C_0 - \frac{F}{K_L V} \\
+      \bar{L} &= \frac{C_0}{\alpha_L} - \frac{F}{K_L V \alpha_L}.
+    \end{align*}
+    Thus third steady-state is {\color{red}$\left( \frac{C_0}{\alpha_L} - \frac{F}{K_L V \alpha_L}, 0, \frac{F}{K_L V} \right)$}.  Call this {\color{red}Steady-State III}.
+
+    \item $\bar{L} = \frac{K_S F}{K_L V \beta} - \frac{F}{V \beta}$:
+
+    From (11), 
+    \begin{align*}
+      -\alpha_L K_L \bar{C}\bar{L} -\alpha_S K_S \bar{C}\bar{S} - \frac{F\bar{C}}{V} + \frac{FC_0}{V} &= 0 \\
+      -\alpha_L K_L \left( \frac{F}{K_L V} \right) \left( \frac{K_S F}{K_L V \beta} - \frac{F}{V \beta} \right) -\alpha_S K_S \left( \frac{F}{K_L V} \right) \bar{S} - \frac{F}{V} \left( \frac{F}{K_L V} \right) + \frac{FC_0}{V} &= 0 
+    \end{align*}
+    \begin{align*}
+      \implies \alpha_S K_S \left( \frac{F}{K_L V} \right) \bar{S} &=  \frac{FC_0}{V} - \alpha_L K_L \left( \frac{F}{K_L V} \right) \left( \frac{K_S F}{K_L V \beta} - \frac{F}{V \beta} \right) - \frac{F}{V} \left( \frac{F}{K_L V} \right) \\ 
+      \alpha_S K_S \left( \frac{1}{K_L} \right) \bar{S} &=  C_0 - \alpha_L \left( \frac{K_S}{K_L \beta} - \frac{1}{\beta} \right) - \left( \frac{F}{K_L V} \right) \\ 
+      \bar{S} &= \left( \frac{K_L}{\alpha_S K_S} \right) C_0 - \alpha_L \left( \frac{K_L}{\alpha_S K_S} \right) \left( \frac{K_S}{K_L \beta} - \frac{1}{\beta} \right) - \left( \frac{K_L}{\alpha_S K_S} \right) \left( \frac{F}{K_L V} \right) \\ 
+      \bar{S} &= \frac{K_L C_0}{\alpha_S K_S} - \frac{\alpha_L}{\alpha_S \beta} + \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{F}{\alpha_S K_S V}.
+    \end{align*}
+    Therefore, the fourth and final steady-state is {\color{red}$\left(\frac{K_S F}{K_L V \beta} - \frac{F}{V \beta},\ \frac{K_L C_0}{\alpha_S K_S} - \frac{\alpha_L}{\alpha_S \beta} + \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{F}{\alpha_S K_S V},\ \frac{F}{K_L V} \right)$}.  Call this {\color{red}Steady-State IV}. 
+  \end{enumerate}
 
 \section*{Source Code:}
 
