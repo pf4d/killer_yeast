@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  10 DEC 2013 17:02
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.8.10)  11 DEC 2013 12:31
 entering extended mode
  %&-line parsing enabled.
 **yeast_project.tex
@@ -654,7 +654,7 @@ File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 (./yeast_project.aux) ) 
 Here is how much of TeX's memory you used:
  5944 strings out of 495061
- 77849 string characters out of 1182620
+ 77849 string characters out of 1182621
  282181 words of memory out of 3000000
  9016 multiletter control sequences out of 15000+50000
  16216 words of font info for 62 fonts, out of 3000000 for 9000
@@ -677,7 +677,7 @@ s/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsltt10
 share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-texlive/fon
 ts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on yeast_project.pdf (13 pages, 807018 bytes).
+Output written on yeast_project.pdf (13 pages, 855997 bytes).
 PDF statistics:
  133 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
