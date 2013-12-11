@@ -226,7 +226,7 @@ From Eq.\ (9), we see that $\bar{L}(K_L \bar{C} - F/V) = 0$, and thus $\bar{L} =
       \alpha_L \bar{L} &= C_0 - \frac{F}{K_L V} \\
       \bar{L} &= \frac{C_0}{\alpha_L} - \frac{F}{K_L V \alpha_L}.
     \end{align*}
-    Thus third steady-state is {\color{red}$\left( \frac{C_0}{\alpha_L} - \frac{F}{K_L V \alpha_L}, 0, \frac{F}{K_L V} \right)$}, where only the killer species of yeaast survive.  Call this {\color{red}Steady-State III}.
+    Thus third steady-state is {\color{red}$\left( \frac{C_0}{\alpha_L} - \frac{F}{K_L V \alpha_L}, 0, \frac{F}{K_L V} \right)$}, where only the killer species of yeast survive.  Call this {\color{red}Steady-State III}.
 
     \item $\bar{L} = \frac{K_S F}{K_L V \beta} - \frac{F}{V \beta}$:
 
@@ -238,11 +238,13 @@ From Eq.\ (9), we see that $\bar{L}(K_L \bar{C} - F/V) = 0$, and thus $\bar{L} =
     Solving for $\bar{S}$,
     \begin{align*}
       \implies \alpha_S K_S \left( \frac{F}{K_L V} \right) \bar{S} &=  \frac{FC_0}{V} - \alpha_L K_L \left( \frac{F}{K_L V} \right) \left( \frac{K_S F}{K_L V \beta} - \frac{F}{V \beta} \right) - \frac{F}{V} \left( \frac{F}{K_L V} \right) \\ 
-      \alpha_S K_S \left( \frac{1}{K_L} \right) \bar{S} &=  C_0 - \alpha_L \left( \frac{K_S}{K_L \beta} - \frac{1}{\beta} \right) - \left( \frac{F}{K_L V} \right) \\ 
-      \bar{S} &= \left( \frac{K_L}{\alpha_S K_S} \right) C_0 - \alpha_L \left( \frac{K_L}{\alpha_S K_S} \right) \left( \frac{K_S}{K_L \beta} - \frac{1}{\beta} \right) - \left( \frac{K_L}{\alpha_S K_S} \right) \left( \frac{F}{K_L V} \right) \\ 
-      \bar{S} &= \frac{K_L C_0}{\alpha_S K_S} - \frac{\alpha_L}{\alpha_S \beta} + \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{F}{\alpha_S K_S V}.
+      \alpha_S K_S \left( \frac{1}{K_L} \right) \bar{S} &=  C_0 - \alpha_L K_L \left( \frac{1}{K_L} \right) \left( \frac{K_S F}{K_L V \beta} - \frac{F}{V \beta} \right) - \frac{F}{K_L V} \\ 
+      \frac{\alpha_S K_S}{K_L} \bar{S} &=  C_0 - \alpha_L \left( \frac{K_S F}{K_L V \beta} - \frac{F}{V \beta} \right) - \frac{F}{K_L V} \\ 
+      \bar{S} &= \left( \frac{K_L}{\alpha_S K_S} \right) C_0 - \alpha_L \left( \frac{K_L}{\alpha_S K_S} \right) \left( \frac{K_S F}{K_L V \beta} - \frac{F}{V \beta} \right) - \left( \frac{K_L}{\alpha_S K_S} \right) \left( \frac{F}{K_L V} \right) \\ 
+      \bar{S} &= \frac{K_L C_0}{\alpha_S K_S} - \frac{\alpha_L F}{\alpha_S V \beta} + \frac{\alpha_L K_L F}{\alpha_S K_S V \beta} - \frac{F}{\alpha_S K_S V} \\
+      \bar{S} &= \frac{K_L C_0}{\alpha_S K_S} + \frac{F}{V} \left( \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{\alpha_L}{\alpha_S \beta} - \frac{1}{\alpha_S K_S} \right).
     \end{align*}
-    Therefore, the fourth and final steady-state is {\color{red}$\left(\frac{K_S F}{K_L V \beta} - \frac{F}{V \beta},\ \frac{K_L C_0}{\alpha_S K_S} - \frac{\alpha_L}{\alpha_S \beta} + \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{F}{\alpha_S K_S V},\ \frac{F}{K_L V} \right)$}, where both species survive.  Call this {\color{red}Steady-State IV}. 
+    Therefore, the fourth and final steady-state is {\color{red}$\left(\frac{K_S F}{K_L V \beta} - \frac{F}{V \beta},\ \frac{K_L C_0}{\alpha_S K_S} + \frac{F}{V} \left( \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{\alpha_L}{\alpha_S \beta} - \frac{1}{\alpha_S K_S} \right),\ \frac{F}{K_L V} \right)$}, where both species survive.  Call this {\color{red}Steady-State IV}. 
   \end{enumerate}
 
 \subsection*{Non-Trivial Steady State Evaluation}
@@ -251,7 +253,7 @@ Looking at {\color{red}Steady-State IV}:
 
 \begin{align*}
   \bar{L} &= \frac{K_S F}{K_L V \beta} - \frac{F}{V \beta} \\
-  \bar{S} &= \frac{K_L C_0}{\alpha_S K_S} - \frac{\alpha_L}{\alpha_S \beta} + \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{F}{\alpha_S K_S V} \\
+  \bar{S} &= \frac{K_L C_0}{\alpha_S K_S} + \frac{F}{V} \left( \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{\alpha_L}{\alpha_S \beta} - \frac{1}{\alpha_S K_S} \right) \\
   \bar{C} &= \frac{F}{K_L V}. \\
 \end{align*} 
 
@@ -260,14 +262,25 @@ First, assume that both $\bar{L}$ and $\bar{S}$ are greater than zero.  Then
   \frac{K_S F}{K_L V \beta} - \frac{F}{V \beta} > 0 \\
   \frac{F}{V \beta} \left( \frac{K_S}{K_L} - 1 \right) > 0,
 \end{align*}
-and thus because $F > 0$ and $\beta > 0$, $\frac{K_S}{K_L} > 1$.  Next, 
+and thus because $F > 0$ and $\beta > 0$, $\frac{K_S}{K_L} > 1$ and hence $K_S > K_L$.  Next, 
 \begin{align*}
-  \frac{K_L C_0}{\alpha_S K_S} - \frac{\alpha_L}{\alpha_S \beta} + \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{F}{\alpha_S K_S V} &> 0 \\
-  \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{\alpha_L}{\alpha_S \beta} &> \frac{F}{\alpha_S K_S V} - \frac{K_L C_0}{\alpha_S K_S} \\
-  \frac{\alpha_L K_L}{\beta} - \frac{\alpha_L K_S}{\beta} &> \frac{F}{V} - K_L C_0 \\
-  \frac{1}{\beta} \left( \alpha_L K_L - \alpha_L K_S \right) &> \frac{F}{V} - K_L C_0 \\
-  \beta &> \frac{\alpha_L K_L - \alpha_L K_S}{\frac{F}{V} - K_L C_0} \\
+  \frac{K_L C_0}{\alpha_S K_S} + \frac{F}{V} \left( \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{\alpha_L}{\alpha_S \beta} - \frac{1}{\alpha_S K_S} \right) &> 0 \\
+  \frac{F}{V} \left( \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{\alpha_L}{\alpha_S \beta} - \frac{1}{\alpha_S K_S} \right) &> -\frac{K_L C_0}{\alpha_S K_S} \\
+  \frac{\alpha_L K_L}{\alpha_S K_S \beta} - \frac{\alpha_L}{\alpha_S \beta} - \frac{1}{\alpha_S K_S} &> - \frac{V}{F} \cdot \frac{K_L C_0}{\alpha_S K_S} \\
+  \frac{\alpha_L K_L}{\beta} - \frac{\alpha_L K_S}{\beta} - 1 &> - \frac{V}{F} \cdot K_L C_0 \\
+  \frac{1}{\beta} (\alpha_L K_L - \alpha_L K_S) &> 1 - \frac{V}{F} \cdot K_L C_0 \\
+  \beta &< \frac{\alpha_L K_L - \alpha_L K_S}{1 - \frac{V}{F} \cdot K_L C_0}.
 \end{align*}
+A similar procedure also produces
+\begin{align*}
+  \beta &> \frac{\frac{F}{V} \left( \alpha_L K_S - \alpha_L K_L \right)}{C_0 K_L - \frac{F}{V}}.
+\end{align*}
+Because $K_s > K_L$, we know that the numerator is negative.  Also, because $\beta > 0$, we know that the numerator must also be negative, i.e., 
+\begin{align*}
+  \frac{V}{F} \cdot K_L C_0 &< 1 \\
+  K_L C_0 &< \frac{F}{V}.
+\end{align*}
+
 
 \newpage
 
