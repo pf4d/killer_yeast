@@ -9,7 +9,6 @@ MATH 445 - Statistical, Dynamical, and Computational Modeling}
 
 \maketitle
 
-\section*{Introduction}
 The differential equation we may use for modeling the growth of yeast is the same as that used for bacterial growth in a chemostat:
 \begin{align*}
   \frac{dN}{dt} &= k(C) N - \frac{FN}{V}, \\
@@ -21,7 +20,7 @@ where $C_n$ is chosen such that $k(C_n) = k_{max} / 2$.  Because the concentrati
 \begin{align*}
   k(C) = \frac{k_{max} C}{C_n + C} \approx \frac{k_{max} C}{C_n} = KC,
 \end{align*}
-where $K$ has units 1/time. The equations we need to solve then become 
+where $K$ has units density/time. The equations we need to solve then become 
 \begin{align}
   \frac{dN}{dt} &= KCN - \frac{FN}{V}, \\
   \frac{dC}{dt} &= -\alpha KCN - \frac{FC}{V} + \frac{FC_0}{V}.
@@ -154,7 +153,7 @@ Now that we have estimates for all values of $\alpha$ and $K$ (for both killer a
 \begin{figure}[H]
   \centering
     \includegraphics[width=1.0\textwidth]{images/sols.png}
-  \caption{\footnotesize $250 \times 250$ steady-state optical density solution for killer yeast (left), sensitive yeast (middle) and nutrient (right) for a total run time of 40,000 hours.  Equations (6), (7), and (8) were solved with the Dormand-Prince numerical integration algorithm with an absolute tolerance of 1e-6, relative tolerance of 1e-6, and timestep $\Delta t$ of 500 hours.  The timestep was kept high due to the $250 \times 250 = 62,500$ simulations required to complete the figure.  Parallel processing was also implemented to speed up the simulation.}
+  \caption{\footnotesize $100 \times 100$ steady-state optical density solution for killer yeast (left), sensitive yeast (middle) and nutrient (right) for a total run time of 40,000 hours.  Equations (6), (7), and (8) were solved with the Dormand-Prince numerical integration algorithm with an absolute tolerance of 1e-6, relative tolerance of 1e-6, and timestep $\Delta t$ of 500 hours.  The timestep was kept high due to the $100 \times 100 = 10,000$ simulations required to complete the figure.  Parallel processing was also implemented to speed up the simulation.}
 \end{figure}
 
 Notice in Figure 4 that as $\beta$ increases the killer yeast dominates and sensitive yeast eventually dies off, while as $F$ increases the sensitive yeast dominates and the killer yeast eventually dies out.  The sensitive yeast are flushed from the container at around $F = 0.4$ volumes/hr.
